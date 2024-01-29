@@ -1,0 +1,30 @@
+// //  /* Animation des Titres */
+// .Animetitre {
+//   opacity: 0;
+//   transform: translateY(50px); /* ou la valeur que vous préférez */
+//   transition: opacity 1s, transform 1s;
+// }
+
+// .Animetitre-animation {
+//   opacity: 1;
+//   transform: translateY(0);
+// }
+
+// .animeTitre {
+//   opacity: 0; /* Commencez avec une opacité à 0 */
+//   transition: opacity 1s ease-in-out; /* Ajoutez une transition pour l'effet de fondu */
+// }
+
+// .animeTitre.fade-in {
+//   opacity: 1; /* Lorsque la classe fade-in est ajoutée, augmentez l'opacité à 1 */
+// }
+.Animetitre {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.Animetitre.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

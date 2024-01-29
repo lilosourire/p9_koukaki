@@ -1,0 +1,13 @@
+.parallaxe {
+  height: 100vh; /* Ajustez la hauteur selon vos besoins */
+  overflow: hidden;
+  position: relative;
+}
+
+.logoBanner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease; /* Ajoutez une transition pour une animation fluide */
+}

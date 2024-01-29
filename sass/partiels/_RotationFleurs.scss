@@ -1,0 +1,80 @@
+/************ Animation des fleurs ********/
+
+/***** Section  "l'histoire"*********/
+
+.article.story__article > p :after {
+  animation: RotationInfinis 5s linear infinite;
+}
+.story__article::after {
+  animation: RotationInfinis 5s linear infinite;
+}
+
+/******* Section "Le lieu" *********/
+
+/******** Section "Studio" *********/
+#studio {
+  h2 {
+    &::before,
+    &::after {
+      animation: RotationInfinis 5s linear infinite;
+    }
+
+    &::before {
+      animation: RotationInfinis 5s linear infinite;
+    }
+
+    &::after {
+      animation: RotationInfinis 5s linear infinite;
+    }
+  }
+}
+
+#studio {
+  &::before,
+  &::after {
+    animation: RotationInfinis 5s linear infinite;
+  }
+}
+
+/********Section Footer ************/
+.site-footer {
+  &::before,
+  &::after {
+    content: "";
+  }
+}
+
+.site-footer ul::after,
+.site-footer::before,
+.site-footer::after {
+  animation: RotationInfinis 5s linear infinite;
+}
+.site-footer,
+h2 {
+  &::after {
+    animation: RotationInfinis 5s linear infinite;
+  }
+}
+
+.site-footer ul ::before,
+.site-footer ul ::after,
+#colophon ul ::after {
+  animation: RotationInfinis 5s linear infinite;
+}
+#colophon .site-footer ::after {
+  animation: RotationInfinis 5s linear infinite;
+}
+
+/************ Animation des fleurs ********/
+
+/***** Section  "l'histoire"*********/
+
+#\#story > article.story__article > p {
+  ::after {
+    animation: RotationInfinis 5s linear infinite;
+  }
+}
+
+// .oscar::before, .oscar::after {
+//     animation: RotationInfinis 5s linear infinite;
+// }

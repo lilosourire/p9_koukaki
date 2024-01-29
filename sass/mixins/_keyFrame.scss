@@ -1,0 +1,59 @@
+// liste des KeyFrame qui seront appelés sur les autres pages en fonction des besoins
+
+// pour l'apparition des sections et éléments au pop de la page:
+
+@keyframes AnimationVersLeBas {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes AnimationVersLeHaut {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// animation permanente des fleurs (rotation sur elle même en continue dans le sens des aiguille d'une montre )
+
+@keyframes RotationInfinis {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes logoBannerFlottement {
+  20%,
+  50%,
+  100% {
+    transform: translate(
+      0,
+      0
+    ); /* Position initiale,
+       le flottement se fait en X et Y */
+  }
+  /* position01: */
+  20% {
+    transform: translate(70px, -20px);
+  }
+  /* position02: */
+  50% {
+    transform: translate(20px, -30px);
+  }
+  /* position03: */
+  100% {
+    transform: translate(30px, -40px);
+  }
+}

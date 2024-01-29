@@ -1,0 +1,45 @@
+//**************** animation des fade in *****************//
+.logoBannerFlottement {
+  animation: flottementLogoBanner 3s linear infinite;
+}
+
+/* Section Banner */
+.backgroundBanner {
+  animation: AnimationVersLeBas 2s;
+}
+
+.logoBanner {
+  animation: AnimationVersLeHaut 2s;
+}
+
+/* Section Footer */
+.site-footer {
+  animation: AnimationVersLeHaut 2s;
+}
+
+/* Section Oscar  */
+.oscar {
+  animation: AnimationVersLeHaut 2s;
+}
+
+/* Section Histoire / Story */
+.story {
+  animation: AnimationVersLeHaut 2s;
+
+  .story__article p,
+  .story__place p {
+    animation: AnimationVersLeBas 2s;
+  }
+}
+
+/* Section Studio Koukaki */
+
+#studio {
+  animation: AnimationVersLeHaut 2s;
+
+  div {
+    p {
+      animation: AnimationVersLeBas 2s;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+﻿/* CSS du le Banner */
+.banner .img {
+  margin-top: 20% !important;
+  width: 80% !important;
+}
+
+.banner img {
+  margin-top: unset;
+  // position: absolute;
+}
+#primary > section.banner > img {
+  position: absolute !important;
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  background-image: none; // on désactive l'image qui est appelé dans la classe banner du theme parent
+  position: relative;
+  align-items: unset;
+
+  .backgroundBanner {
+    // position: absolute;
+    //position: relative;
+    width: 100% !important;
+    z-index: -2;
+    margin-top: 0px !important;
+  }
+
+  .logoBanner {
+    z-index: 1;
+    // position: absolute;
+    top: 120px;
+    // margin-left: -350px !important;
+  }
+
+  .videoBanner {
+    position: absolute;
+    width: 100% !important;
+    z-index: -1;
+  }
+}
+
+// @media (max-width: 800px to 900px) {
+
+//        .videoBanner {
+//             width: 120% !important;
+//         }
+//  }
+
+@media (max-width: 700px) {
+  .banner {
+    .videoBanner {
+      display: none;
+    }
+
+    .parallaxe {
+      left: 0px;
+    }
+
+    .logoBanner {
+      position: absolute;
+      top: 50px;
+      left: 100px;
+      width: 80% !important;
+      z-index: -1;
+    }
+  }
+}

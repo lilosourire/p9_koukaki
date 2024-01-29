@@ -1,0 +1,18 @@
+﻿/* CSS <section> Place / Nuage Bleu */
+
+.story #place {
+  background-image: url("../asset/images/place_bg_sans-nuage-bleu.png");
+  // background-color: aqua;
+}
+
+#NuagesBleu {
+  margin-top: -25%;
+  filter: blur(10px);
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  #NuagesBleu {
+    display: none;
+  }
+}
