@@ -1,30 +1,28 @@
 // //  /* Animation des Titres */
 // .Animetitre {
 //   opacity: 0;
-//   transform: translateY(50px); /* ou la valeur que vous préférez */
+//   transform: translateY(50px);
 //   transition: opacity 1s, transform 1s;
 // }
 
-// .Animetitre-animation {
+// .animateTitle {
 //   opacity: 1;
 //   transform: translateY(0);
 // }
+@import "../mixins/keyFrame";
 
-// .animeTitre {
-//   opacity: 0; /* Commencez avec une opacité à 0 */
-//   transition: opacity 1s ease-in-out; /* Ajoutez une transition pour l'effet de fondu */
-// }
+$titleSpeed: 5s;
 
-// .animeTitre.fade-in {
-//   opacity: 1; /* Lorsque la classe fade-in est ajoutée, augmentez l'opacité à 1 */
-// }
 .Animetitre {
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
 }
 
-.Animetitre.fade-in {
+.animateTitle {
+  display: inline-block;
+  position: relative;
   opacity: 1;
-  transform: translateY(0);
+}
+
+.animateTitle {
+  @include keyFrames(0, AnimationVersLeHaut, 100%, $titleSpeed);
 }
