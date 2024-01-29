@@ -1,6 +1,19 @@
 // liste des KeyFrame qui seront appelés sur les autres pages en fonction des besoins
 
 // pour l'apparition des sections et éléments au pop de la page:
+@mixin keyFrames($hauteur, $nomKeyFram) {
+  @keyframes #{$nomKeyFram} {
+    0% {
+      transform: translateY($hauteur);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
 
 @keyframes AnimationVersLeBas {
   0% {
@@ -57,3 +70,5 @@
     transform: translate(30px, -40px);
   }
 }
+
+@include keyFrames(100%, KframeAnimateTitre);

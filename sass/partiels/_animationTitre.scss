@@ -1,17 +1,24 @@
 // //  /* Animation des Titres */
+
+// $vitesseTitre: 1s;
+
 // .Animetitre {
 //   opacity: 0;
-//   transform: translateY(50px);
-//   transition: opacity 1s, transform 1s;
 // }
 
 // .animateTitle {
+//   display: inline-block;
+//   position: relative;
 //   opacity: 1;
-//   transform: translateY(0);
 // }
-@import "../mixins/keyFrame";
 
-$titleSpeed: 5s;
+// .animateTitle {
+//   animation: KframeAnimateTitre $vitesseTitre ease-in-out;
+// }
+
+@import "../mixins/_keyFrame";
+
+$vitesseTitre: 1s;
 
 .Animetitre {
   opacity: 0;
@@ -21,8 +28,5 @@ $titleSpeed: 5s;
   display: inline-block;
   position: relative;
   opacity: 1;
-}
-
-.animateTitle {
-  @include keyFrames(0, AnimationVersLeHaut, 100%, $titleSpeed);
+  animation: KframeAnimateTitre $vitesseTitre ease-in-out;
 }
