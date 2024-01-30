@@ -1,21 +1,4 @@
-$background-color: black;
-
-.MenuFull {
-  background-color: #fff5e9;
-  opacity: 0;
-  transition: opacity 0.5s ease-in, height 0.5s ease-in;
-
-  &.nav_open {
-    opacity: 1;
-    height: 100vh;
-
-    visibility: visible;
-    display: block;
-    transition: opacity 0.5s ease-in, height 0.5s ease-in;
-    width: 100%;
-    overflow: hidden;
-  }
-}
+/* CSS pour le menu burger */
 
 .boutonMenu {
   width: 42px;
@@ -29,7 +12,7 @@ $background-color: black;
   span {
     width: 100%;
     height: 1px;
-    background-color: $background-color;
+    background-color: black;
     display: block;
     position: absolute;
     top: 50%;
@@ -42,7 +25,7 @@ $background-color: black;
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: $background-color;
+      background-color: black;
       transition: transform 0.5s ease-in-out;
     }
 
@@ -77,9 +60,7 @@ $background-color: black;
     align-items: center;
     row-gap: 70px;
   }
-}
 
-.liste {
   ul {
     text-align: center;
     height: 57%;
@@ -116,82 +97,17 @@ $background-color: black;
   padding-top: 100px !important;
 }
 
-// Images dans le menu-Burger
-/* Images du Menu deplier en mode Full */
+/* Images dans le menu-Burger */
+/* Ajoutez ici les styles pour les images du menu burger */
 
-#catMenuBleu,
-#catMenuBlack,
-#catMenuOrange,
-#fleurMenuSunFlower,
-#fleurMenuOrchid,
-#fleurMenuHibiscus,
-#fleurMenuRandom,
-#fleurMenuFlower {
-  position: absolute;
-}
-
-.logoMenu {
-  width: 200px;
-}
-
-#catMenuBleu {
-  top: 260px;
-  left: 280px;
-  width: 120px;
-  height: 105px;
-}
-
-#catMenuBlack {
-  top: 480px;
-  right: 210px;
-  width: 120px;
-  height: 105px;
-}
-
-#catMenuOrange {
-  bottom: 240px;
-  left: 80px;
-  width: 93px;
-  height: 84px;
-}
-
-#fleurMenuSunFlower {
-  top: 215px;
-  right: 210px;
-}
-
-#fleurMenuOrchid {
-  top: 117px;
-  left: -54px;
-}
-
-#fleurMenuHibiscus {
-  bottom: -120px;
-  right: -240px;
-  width: 30%;
-}
-
-#fleurMenuRandom {
-  top: 400px;
-  right: -80px;
-  width: 5%;
-}
-
-#fleurMenuFlower {
-  bottom: 480px;
-  left: 230px;
-  width: 80px;
-  height: 80px;
-}
-
-// Animation Flottement des chats
+/* Animation Flottement des chats */
 #catMenuBlack,
 #catMenuOrange,
 #catMenuBleu {
   animation: flottementChat 3s infinite alternate;
 }
 
-// media querie images
+/* Media Queries */
 @media (max-width: 1100px) {
   #catMenuBlack,
   #fleurMenuFlower,
@@ -210,12 +126,51 @@ $background-color: black;
   }
 }
 
-//media querie pour le menu
-@media screen and (min-width: 150px) {
-  .main-navigation {
-    height: 80px;
-  }
-  .main-navigation ul {
-    display: flex;
+/* Ajoutez ici les styles pour les media queries */
+
+/* Mixin "factoriser" de la keyframes modèle */
+@mixin keyFrames($hauteur, $nomKeyFram) {
+  @keyframes #{$nomKeyFram} {
+    0% {
+      transform: translateY($hauteur);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
+
+/* KeyFrames pour les animations */
+@include keyFrames(-200px, AnimationVersBas);
+@include keyFrames(200px, AnimationVersHaut);
+@include keyFrames(80px, AnimationLogo);
+
+/* KeyFrame pour l'animation des Titres */
+@include keyFrames(100%, KframeAnimateTitre1);
+@include keyFrames(150%, KframeAnimateTitre2);
+
+/* Keyframe pour faire tourner les Fleurs */
+@keyframes RotationFleurs {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyframes pour les animations de Flottement */
+@keyframes flottementChat {
+  0%,
+  100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Ajoutez ici d'autres styles pour les keyframes */
