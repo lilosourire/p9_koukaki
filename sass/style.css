@@ -54,6 +54,24 @@ le flottement se fait en X et Y */
     opacity: 1;
   }
 }
+@keyframes flottementChat {
+  20%, 50%, 100% {
+    transform: translate(0, 0); /* Position initiale,
+le flottement se fait en X et Y */
+  }
+  /* position01: */
+  20% {
+    transform: translate(70px, -20px);
+  }
+  /* position02: */
+  50% {
+    transform: translate(20px, -30px);
+  }
+  /* position03: */
+  100% {
+    transform: translate(30px, -40px);
+  }
+}
 .logoBannerFlottement {
   animation: flottementLogoBanner 3s linear infinite;
 }
@@ -206,6 +224,24 @@ le flottement se fait en X et Y */
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes flottementChat {
+  20%, 50%, 100% {
+    transform: translate(0, 0); /* Position initiale,
+le flottement se fait en X et Y */
+  }
+  /* position01: */
+  20% {
+    transform: translate(70px, -20px);
+  }
+  /* position02: */
+  50% {
+    transform: translate(20px, -30px);
+  }
+  /* position03: */
+  100% {
+    transform: translate(30px, -40px);
   }
 }
 .Animetitre {
@@ -513,7 +549,7 @@ le flottement se fait en X et Y */
   line-height: 104px;
 }
 .liste li a:hover {
-  filter: drop-shadow(0px 0px 5px #ff5c00);
+  filter: drop-shadow(0px 0px 10px #d35d19);
   -webkit-filter: drop;
 }
 .liste img {
@@ -567,23 +603,27 @@ le flottement se fait en X et Y */
 #fleurMenuSunFlower {
   top: 215px;
   right: 210px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuOrchid {
   top: 117px;
   left: -54px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuHibiscus {
   bottom: -120px;
   right: -240px;
   width: 30%;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuRandom {
   top: 400px;
   right: -80px;
   width: 5%;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuFlower {
@@ -591,6 +631,7 @@ le flottement se fait en X et Y */
   left: 230px;
   width: 80px;
   height: 80px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #catMenuBlack,

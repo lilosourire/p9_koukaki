@@ -72,3 +72,39 @@
 }
 
 @include keyFrames(100%, KframeAnimateTitre);
+
+// mouvement de flotement des chats,menu burger etc
+
+// @keyframes flottementChat {
+//   0%,
+//   100% {
+//     transform: translateY(-15px);
+//   }
+//   50% {
+//     transform: translateY(15px);
+//   }
+// }
+
+@keyframes flottementChat {
+  20%,
+  50%,
+  100% {
+    transform: translate(
+      0,
+      0
+    ); /* Position initiale,
+       le flottement se fait en X et Y */
+  }
+  /* position01: */
+  20% {
+    transform: translate(70px, -20px);
+  }
+  /* position02: */
+  50% {
+    transform: translate(20px, -30px);
+  }
+  /* position03: */
+  100% {
+    transform: translate(30px, -40px);
+  }
+}

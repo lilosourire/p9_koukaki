@@ -99,9 +99,9 @@ $background-color: black;
     font-size: 45px;
     font-weight: bold;
     line-height: 104px;
-
+    // mise en place de l'ombre portée
     &:hover {
-      filter: drop-shadow(0px 0px 5px #ff5c00);
+      filter: drop-shadow(0px 0px 10px #d35d19);
       -webkit-filter: drop;
     }
   }
@@ -160,23 +160,27 @@ $background-color: black;
 #fleurMenuSunFlower {
   top: 215px;
   right: 210px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuOrchid {
   top: 117px;
   left: -54px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuHibiscus {
   bottom: -120px;
   right: -240px;
   width: 30%;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuRandom {
   top: 400px;
   right: -80px;
   width: 5%;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 #fleurMenuFlower {
@@ -184,6 +188,7 @@ $background-color: black;
   left: 230px;
   width: 80px;
   height: 80px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 // Animation Flottement des chats
