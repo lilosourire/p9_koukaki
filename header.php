@@ -37,6 +37,7 @@
 
             <!-- ici début du menue hanburger -->
             <div class="boutonMenu">
+            <span> </span>    
 <!-- 
 1 suprimer le menue original
 2 création du menue burger cf js : Au clic sur le burger, le reste de l’écran est recouvert par le menu -->
@@ -68,29 +69,10 @@
         </ul>
         <!-- mise en place du paragraphe niveau menu -->
         <p class="menuParagraphe">STUDIO KOUKAKI</p>
+    <!--menu-item_container  -->
     </div>
+<!-- menu-items MenuFull -->
 </section>
 
-<!-- éléments innutiles, commenter, puis supprimer -->
-                <!-- Liste des éléments de navigation -->
-                <ul>
-                    <!-- Commentaire : Lien vers la section Histoire -->
-                    <li><a href="#story">Histoire</a></li>
-                    
-                    <!-- Commentaire : Lien vers la section Personnages -->
-                    <li><a href="#characters">Personnages</a></li>
-                    
-                    <!-- Commentaire : Affichage du titre du site avec un lien vers la page d'accueil -->
-                    <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                    
-                    <!-- Commentaire : Lien vers la section Lieu -->
-                    <li><a href="#place">Lieu</a></li>
-                    
-                    <!-- Commentaire : Lien vers la section Studio Koukaki -->
-                    <li><a href="#studio">Studio Koukaki</a></li>
-                </ul>
-<!-- 
- 
-                ?> -->
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

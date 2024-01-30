@@ -5,8 +5,7 @@
 }
 
 .nominationText {
-  background-image: url("./assets/images/orange_characters_bg.png");
-  background-image: url("../../asset/images/orange_characters_bg.png");
+  background-image: url("./../asset/images/orange_characters_bg.png");
   font-size: 33px;
 }
 
@@ -28,14 +27,15 @@
 }
 
 .oscar::before {
-  background-image: url("./assets/images/Sunflower.png");
-  background-image: url("../../asset/images/Sunflower.png");
+  // image fonctionnelle sur f12 :
+  background-image: url("./../asset/images/Sunflower.png");
   left: -144px;
   top: -96px;
 }
 
 .oscar::after {
-  background-image: url("./asset/images/orchid.png");
+  // image fonctionelle sur f12:
+  background-image: url("./../asset/images/orchid.png");
 
   right: -210px;
   top: -128px;
