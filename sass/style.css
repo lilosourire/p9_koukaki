@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes AnimationVersLeBas {
   0% {
     transform: translateY(-150px);
@@ -402,12 +401,14 @@ le flottement se fait en X et Y */
   background-image: url("./../asset/images/Sunflower.png");
   left: -144px;
   top: -96px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 .oscar::after {
   background-image: url("./../asset/images/orchid.png");
   right: -210px;
   top: -128px;
+  animation: RotationInfinis 5s linear infinite;
 }
 
 @media (max-width: 1100px) {
@@ -426,6 +427,21 @@ le flottement se fait en X et Y */
   }
 }
 /* CSS pour le menu burger */
+.MenuFull {
+  background-color: #fff5e9;
+  opacity: 0;
+  transition: opacity 0.5s ease-in, height 0.5s ease-in;
+}
+.MenuFull.nav_open {
+  opacity: 1;
+  height: 100vh;
+  visibility: visible;
+  display: block;
+  transition: opacity 0.5s ease-in, height 0.5s ease-in;
+  width: 100%;
+  overflow: hidden;
+}
+
 .boutonMenu {
   width: 42px;
   height: 24px;
@@ -479,27 +495,28 @@ le flottement se fait en X et Y */
   align-items: center;
   row-gap: 70px;
 }
-.menu-items ul {
+
+.liste ul {
   text-align: center;
   height: 57%;
   margin: 0;
   padding: 0;
 }
-.menu-items li {
+.liste li {
   text-align: center;
 }
-.menu-items li a {
+.liste li a {
   text-decoration: none !important;
   list-style-type: none !important;
   font-size: 45px;
   font-weight: bold;
   line-height: 104px;
 }
-.menu-items li a:hover {
+.liste li a:hover {
   filter: drop-shadow(0px 0px 5px #ff5c00);
   -webkit-filter: drop;
 }
-.menu-items img {
+.liste img {
   margin: auto;
   display: flex;
 }
@@ -510,16 +527,78 @@ le flottement se fait en X et Y */
   padding-top: 100px !important;
 }
 
-/* Images dans le menu-Burger */
-/* Ajoutez ici les styles pour les images du menu burger */
-/* Animation Flottement des chats */
+/* Images du Menu deplier en mode Full */
+#catMenuBleu,
+#catMenuBlack,
+#catMenuOrange,
+#fleurMenuSunFlower,
+#fleurMenuOrchid,
+#fleurMenuHibiscus,
+#fleurMenuRandom,
+#fleurMenuFlower {
+  position: absolute;
+}
+
+.logoMenu {
+  width: 200px;
+}
+
+#catMenuBleu {
+  top: 260px;
+  left: 280px;
+  width: 120px;
+  height: 105px;
+}
+
+#catMenuBlack {
+  top: 480px;
+  right: 210px;
+  width: 120px;
+  height: 105px;
+}
+
+#catMenuOrange {
+  bottom: 240px;
+  left: 80px;
+  width: 93px;
+  height: 84px;
+}
+
+#fleurMenuSunFlower {
+  top: 215px;
+  right: 210px;
+}
+
+#fleurMenuOrchid {
+  top: 117px;
+  left: -54px;
+}
+
+#fleurMenuHibiscus {
+  bottom: -120px;
+  right: -240px;
+  width: 30%;
+}
+
+#fleurMenuRandom {
+  top: 400px;
+  right: -80px;
+  width: 5%;
+}
+
+#fleurMenuFlower {
+  bottom: 480px;
+  left: 230px;
+  width: 80px;
+  height: 80px;
+}
+
 #catMenuBlack,
 #catMenuOrange,
 #catMenuBleu {
   animation: flottementChat 3s infinite alternate;
 }
 
-/* Media Queries */
 @media (max-width: 1100px) {
   #catMenuBlack,
   #fleurMenuFlower,
@@ -536,76 +615,11 @@ le flottement se fait en X et Y */
     display: none;
   }
 }
-/* Ajoutez ici les styles pour les media queries */
-/* Mixin "factoriser" de la keyframes modèle */
-/* KeyFrames pour les animations */
-@keyframes AnimationVersBas {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
+@media screen and (min-width: 150px) {
+  .main-navigation {
+    height: 80px;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  .main-navigation ul {
+    display: flex;
   }
-}
-@keyframes AnimationVersHaut {
-  0% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes AnimationLogo {
-  0% {
-    transform: translateY(80px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* KeyFrame pour l'animation des Titres */
-@keyframes KframeAnimateTitre1 {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes KframeAnimateTitre2 {
-  0% {
-    transform: translateY(150%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* Keyframe pour faire tourner les Fleurs */
-@keyframes RotationFleurs {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* Keyframes pour les animations de Flottement */
-@keyframes flottementChat {
-  0%, 100% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
-/* Ajoutez ici d'autres styles pour les keyframes *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
