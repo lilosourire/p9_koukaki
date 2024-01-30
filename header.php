@@ -10,7 +10,7 @@
  */
 
 ?>
-<!doctype html>
+        <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -21,7 +21,7 @@
 
 </head>
 
-    <!-- Définition des classes du corps de la page selon les paramètres WordPress -->
+<!-- Définition des classes du corps de la page selon les paramètres WordPress -->
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     
@@ -34,29 +34,63 @@
         <header id="masthead" class="site-header">
             <!-- Navigation principale du site -->
             <nav id="site-navigation" class="main-navigation">
-                <!-- Bouton de bascule du menu pour les écrans mobiles -->
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-                
+
+            <!-- ici début du menue hanburger -->
+            <div class="boutonMenu">
+<!-- 
+1 suprimer le menue original
+2 création du menue burger cf js : Au clic sur le burger, le reste de l’écran est recouvert par le menu -->
+
+<!-- nouvelle navigation -->
+</nav><!-- #site-navigation -->
+<!-- les sections du menu -->
+<section class="menu-items MenuFull">
+    <div class="menu-items__container">
+<!-- mise en place du logo + image -->
+          <img class="logoMenu"         src="<?php echo get_stylesheet_directory_uri() . '/asset/images/logo-en-paralax.png'; ?>" alt="logo menu en parallaxe">		      
+<!-- ici mise en placce des autres images, classe + appel + alt -->
+        <img id="catMenuBleu"         src="<?php echo get_stylesheet_directory_uri() . '../asset/images/bluecat.png'; ?>" alt="Chat violet">
+        <img id="catMenuBlack"        src="<?php echo get_stylesheet_directory_uri() . './asset/images/blackcat.png'; ?>" alt="Chat noir">
+        <img id="catMenuOrange"       src="<?php echo get_stylesheet_directory_uri() . '/asset/images/orangecat.png'; ?>" alt="Chat orange">
+        <img id="fleurMenuSunFlower"  src="<?php echo get_stylesheet_directory_uri() . '/asset/images/Sunflower.png'; ?>" alt="marguerite blanche">
+        <img id="fleurMenuOrchid"     src="<?php echo get_stylesheet_directory_uri() . '/asset/images/orchid.png'; ?>" alt="Orchidée violette">
+        <img id="fleurMenuHibiscus"   src="<?php echo get_stylesheet_directory_uri() . '/asset/images/hibiscus_footer.png'; ?>" alt="Hibiscus">
+        <img id="fleurMenuRandom"     src="<?php echo get_stylesheet_directory_uri() . '/asset/images/random_flower.png'; ?>" alt="petite Fleur violette">
+        <img id="fleurMenuFlower"     src="<?php echo get_stylesheet_directory_uri() . '/asset/images/flower.png'; ?>" alt="petite Fleur orange">
+
+        <!-- Liste des éléments du menu avec des liens la classe permet le fade-->
+
+        <ul class="liste">
+            <li><a href="#story"><span class="Animetitre">Histoire</span></a></li>
+            <li><a href="#characters"><span class="Animetitre">Personnages</span></a></li>
+            <li><a href="#place"><span class="Animetitre">Lieu</span></a></li>
+            <li><a href="#studio"><span class="Animetitre">Studio</span><span class="Animetitre2">&nbsp;Koukaki</span></a></li>
+        </ul>
+        <!-- mise en place du paragraphe niveau menu -->
+        <p class="menuParagraphe">STUDIO KOUKAKI</p>
+    </div>
+</section>
+
+<!-- éléments innutiles, commenter, puis supprimer -->
                 <!-- Liste des éléments de navigation -->
                 <ul>
+                    <!-- Commentaire : Lien vers la section Histoire -->
                     <li><a href="#story">Histoire</a></li>
+                    
+                    <!-- Commentaire : Lien vers la section Personnages -->
                     <li><a href="#characters">Personnages</a></li>
-                    <!-- Affichage du titre du site avec un lien vers la page d'accueil -->
+                    
+                    <!-- Commentaire : Affichage du titre du site avec un lien vers la page d'accueil -->
                     <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+                    
+                    <!-- Commentaire : Lien vers la section Lieu -->
                     <li><a href="#place">Lieu</a></li>
+                    
+                    <!-- Commentaire : Lien vers la section Studio Koukaki -->
                     <li><a href="#studio">Studio Koukaki</a></li>
                 </ul>
-
-                <?php
-                // Vérifie si la fonction test_function est définie
-                if (function_exists('test_function')) {
-                    // Appelle la fonction de test
-                    test_function();
-                }
-                ?>
+<!-- 
+ 
+                ?> -->
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
