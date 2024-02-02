@@ -375,12 +375,20 @@ le flottement se fait en X et Y */
     z-index: -1;
   }
 }
+@media screen and (max-width: 900px) {
+  .logoBanner {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 70% !important;
+    z-index: -1;
+  }
+}
 .logoBannerFlottement {
   animation: flottementLogoBanner 3s linear infinite;
 }
 
 .logoBanner {
-  background-color: blue;
   transform: translateY(-50%);
   margin-top: 15% !important;
   width: 90% !important;
