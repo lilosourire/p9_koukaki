@@ -21,9 +21,31 @@
 @keyframes RotationInfinis {
   0% {
     transform: rotate(0deg);
+    transform-origin: center;
   }
   100% {
     transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+@keyframes RotationStatique {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 77px 77px;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 77px 77px;
+  }
+}
+@keyframes RotationViolette {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 100px 100px;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 100px 100px;
   }
 }
 @keyframes logoBannerFlottement {
@@ -128,7 +150,7 @@ le flottement se fait en X et Y */
   animation: RotationInfinis 5s linear infinite;
 }
 #studio h2::before {
-  animation: RotationInfinis 5s linear infinite;
+  animation: RotationViolette 5s linear infinite;
 }
 #studio h2::after {
   animation: RotationInfinis 5s linear infinite;
@@ -151,7 +173,7 @@ le flottement se fait en X et Y */
 
 .site-footer::after,
 h2::after {
-  animation: RotationInfinis 5s linear infinite;
+  animation: RotationStatique 5s linear infinite;
 }
 
 .site-footer ul ::before,
@@ -193,9 +215,31 @@ h2::after {
 @keyframes RotationInfinis {
   0% {
     transform: rotate(0deg);
+    transform-origin: center;
   }
   100% {
     transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+@keyframes RotationStatique {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 77px 77px;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 77px 77px;
+  }
+}
+@keyframes RotationViolette {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 100px 100px;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 100px 100px;
   }
 }
 @keyframes logoBannerFlottement {
@@ -311,6 +355,26 @@ le flottement se fait en X et Y */
     z-index: -1;
   }
 }
+@media (max-width: 800px to 900px) {
+  .videoBanner {
+    width: 120% !important;
+  }
+}
+@media (max-width: 700px) {
+  .banner .videoBanner {
+    display: none;
+  }
+  .banner .parallaxe {
+    left: 0px;
+  }
+  .banner .logoBanner {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 80% !important;
+    z-index: -1;
+  }
+}
 .logoBannerFlottement {
   animation: flottementLogoBanner 3s linear infinite;
 }
@@ -346,7 +410,7 @@ le flottement se fait en X et Y */
   padding-top: 50px;
   padding-bottom: 50px;
   margin: auto;
-  width: 100%;
+  width: 1440px;
   max-width: 100%;
 }
 

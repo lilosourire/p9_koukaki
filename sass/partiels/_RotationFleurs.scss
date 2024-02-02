@@ -20,7 +20,7 @@
     }
 
     &::before {
-      animation: RotationInfinis 5s linear infinite;
+      animation: RotationViolette 5s linear infinite;
     }
 
     &::after {
@@ -52,7 +52,7 @@
 .site-footer,
 h2 {
   &::after {
-    animation: RotationInfinis 5s linear infinite;
+    animation: RotationStatique 5s linear infinite;
   }
 }
 

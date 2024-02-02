@@ -6,7 +6,15 @@ function theme_enqueue_styles()
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 
     // Chargement du style.css du thème enfant
-    wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/sass/style.css', array());
+    //wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/sass/style.css', array());
+    $file_name = '/sass/style.css'; // Nom du fichier CSS
+	$style_path =  get_stylesheet_directory() . $file_name; // Chemin vers votre fichier CSS
+	wp_enqueue_style(
+        'theme-style', // Identifiant unique pour votre style
+        get_stylesheet_directory_uri(). $file_name,
+        array(), // Dépendances, le cas échéant
+        file_exists($style_path) ? filemtime($style_path) : false // Version du fichier basée sur la date de dernière modification ( pour les probleme de cache)
+    );
 }
 
 

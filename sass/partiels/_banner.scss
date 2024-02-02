@@ -66,3 +66,29 @@
     }
   }
 }
+//mise en place des media queries
+@media (max-width: 800px to 900px) {
+  .videoBanner {
+    width: 120% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .banner {
+    .videoBanner {
+      display: none;
+    }
+
+    .parallaxe {
+      left: 0px;
+    }
+
+    .logoBanner {
+      position: absolute;
+      top: 50px;
+      left: 100px;
+      width: 80% !important;
+      z-index: -1;
+    }
+  }
+}
