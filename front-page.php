@@ -1,5 +1,4 @@
 <?php
-// ou est le caroussel dans cette page?
 
 get_header();
 ?>
@@ -20,10 +19,6 @@ get_header();
   <img class="logoBanner" src="<?= get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants" data-0="transform: translateY(0%);" data-500="transform: translateY(-100%);">
 </div>
 
-    <!-- <div class="parallaxe">
-     <img class="logoBanner" src="<?= get_template_directory_uri() . '/assets/images/logo.png'; ?>" alt="logo Fleurs d'oranger & chats errants">
-    </div> 
-    </div>  -->
         </section>
 
         <!-- section "histoire"  -->

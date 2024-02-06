@@ -1,5 +1,7 @@
 // //  /* Animation des Titres */
 
+@import "../mixins/_keyFrame";
+
 // $vitesseTitre: 1s;
 
 // .Animetitre {
@@ -10,23 +12,20 @@
 //   display: inline-block;
 //   position: relative;
 //   opacity: 1;
-// }
-
-// .animateTitle {
 //   animation: KframeAnimateTitre $vitesseTitre ease-in-out;
 // }
 
-@import "../mixins/_keyFrame";
+$animation-speed: 1s;
 
-$vitesseTitre: 1s;
-
-.Animetitre {
+.Animetitre,
+.Animetitre2 {
   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity $animation-speed, transform $animation-speed;
 }
 
-.animateTitle {
-  display: inline-block;
-  position: relative;
+.animateTitle,
+.animateTitle2 {
   opacity: 1;
-  animation: KframeAnimateTitre $vitesseTitre ease-in-out;
+  transform: translateY(0);
 }

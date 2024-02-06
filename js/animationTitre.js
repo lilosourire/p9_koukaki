@@ -1,7 +1,4 @@
 ﻿//console.log(" Message dans la console, pour vérifier que le JavaScript est fonctionnel ")
-// console.log(" le script javascript lancé se nomme animationTitre.js ");
-
-//console.log(" Message dans la console, pour vérifier que le JavaScript est fonctionnel ")
 console.log(" le script javascript lancé se nomme animationTitre.js ");
 
 const observer = new IntersectionObserver((entries) => {

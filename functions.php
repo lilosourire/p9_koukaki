@@ -24,12 +24,6 @@ function carrousel() {
 }
 add_action( 'wp_enqueue_scripts', 'carrousel' );
 
-// function carrousel() {
-//     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '10.3.1');
-//     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '10.3.1', true);
-    
-// }
-// add_action('wp_enqueue_scripts', 'carrousel');
 
 function script_JS_Custo()
 {

@@ -20,8 +20,3 @@ function scrollNuage() {
 // écouteur d'événement pour défilement nuage
 window.addEventListener("scroll", scrollNuage);
 
-// function calculerSomme(a, b) {
-//     let somme = a + b;
-//     console.log("La somme de", a, "+", b, "est égale à", somme);
-//     return somme;
-//   }

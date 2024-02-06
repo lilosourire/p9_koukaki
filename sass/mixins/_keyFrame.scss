@@ -97,18 +97,6 @@
 
 @include keyFrames(100%, KframeAnimateTitre);
 
-// mouvement de flotement des chats,menu burger etc
-
-// @keyframes flottementChat {
-//   0%,
-//   100% {
-//     transform: translateY(-15px);
-//   }
-//   50% {
-//     transform: translateY(15px);
-//   }
-// }
-
 @keyframes flottementChat {
   20%,
   50%,
@@ -130,5 +118,17 @@
   /* position03: */
   100% {
     transform: translate(30px, -40px);
+  }
+}
+
+// Scroll-based fade-in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
