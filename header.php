@@ -50,8 +50,8 @@
 <!-- mise en place du logo + image -->
           <img class="logoMenu"         src="<?php echo get_stylesheet_directory_uri() . '/asset/images/logo-en-paralax.png'; ?>" alt="logo menu en parallaxe">		      
 <!-- ici mise en placce des autres images, classe + appel + alt -->
-        <img id="catMenuBleu"         src="<?php echo get_stylesheet_directory_uri() . '../asset/images/bluecat.png'; ?>" alt="Chat violet">
-        <img id="catMenuBlack"        src="<?php echo get_stylesheet_directory_uri() . './asset/images/blackcat.png'; ?>" alt="Chat noir">
+        <img id="catMenuBleu"         src="<?php echo get_stylesheet_directory_uri() . '/asset/images/bluecat.png'; ?>" alt="Chat violet">
+        <img id="catMenuBlack"        src="<?php echo get_stylesheet_directory_uri() . '/asset/images/blackcat.png'; ?>" alt="Chat noir">
         <img id="catMenuOrange"       src="<?php echo get_stylesheet_directory_uri() . '/asset/images/orangecat.png'; ?>" alt="Chat orange">
         <img id="fleurMenuSunFlower"  src="<?php echo get_stylesheet_directory_uri() . '/asset/images/Sunflower.png'; ?>" alt="marguerite blanche">
         <img id="fleurMenuOrchid"     src="<?php echo get_stylesheet_directory_uri() . '/asset/images/orchid.png'; ?>" alt="Orchidée violette">

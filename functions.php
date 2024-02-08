@@ -29,7 +29,7 @@ function script_JS_Custo()
 {
     // wp_enqueue_script('fadein-script', get_stylesheet_directory_uri() . '/js/scroll-fadePage.js', array('jquery'), '1.0', true);
     // appel de la page du flottement du logo:
-    wp_enqueue_script('flottement-logo-script', get_stylesheet_directory_uri() . '/js/FlottementLogo.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('flottement-logo-script', get_stylesheet_directory_uri() . './js/FlottementLogo.js', array('jquery'), '1.0', true);
     // Gestion des Animation des Titres
     wp_enqueue_script('custom-scripts', get_stylesheet_directory_uri() . './js/animationTitre.js', array(), '1.0.0', true);
     // Parallaxe
