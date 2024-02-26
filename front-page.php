@@ -11,7 +11,7 @@ get_header();
     <source src="<?php echo get_stylesheet_directory_uri() . '/videos/Koukaki_video.mp4'; ?>" type="video/mp4">
          <!-- imgage statique d'arrière plan -->
          <div class="imgBanner">  
-         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="logo  de : Fleurs d'oranger et chats errants">
+         <img src="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " alt="imagede: Fleurs d'oranger et chats errants">
          </div>
         </video> 
      <!--mise en place du logo et animatien en sus  +du parallaxe sur la div entière-->

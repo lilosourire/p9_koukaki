@@ -4,7 +4,7 @@ console.log(
 );
 
 const swiper = new Swiper(".swiper", {
-  effect: "slide",
+  effect: "coverflow",
   grabcursor: true,
   centeredSlides: true,
   slidesPerView: "auto",

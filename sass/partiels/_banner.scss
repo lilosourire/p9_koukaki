@@ -16,7 +16,7 @@
 }
 
 .banner {
-  background-image: none; // on désactive l'image qui est appelé dans la classe banner du theme parent
+  // background-image: none; // on désactive l'image qui est appelé dans la classe banner du theme parent
   position: relative;
   align-items: unset;
 
@@ -38,7 +38,7 @@
   }
 }
 
-@media (max-width: 800px ) {
+@media (max-width: 800px) {
   .videoBanner {
     width: 120% !important;
   }
@@ -70,28 +70,27 @@
   }
 }
 
-@media (max-width: 700){
-  .banner img {
-  display:block;
-  }
-
 @media (max-width: 700px) {
   .banner {
-    .videoBanner {
-      display: none;
-    }
+    background-image: url(../../asset/images/banner.png) !important;
+    background-size: cover; /* ou 'contain', selon vos préférences */
+    background-position: center center;
+    height: 100vh; /* ou ajustez selon vos besoins */
+    display: flex;
+    align-items: unset; /* Assurez-vous que cela ne perturbe pas votre mise en page */
+    justify-content: center; /* Assurez-vous que cela ne perturbe pas votre mise en page */
+  }
 
-    .parallaxe {
-      left: 0px;
-    }
+  .videoBanner {
+    display: none;
+  }
 
-    .logoBanner {
-      position: absolute;
-      top: 50px;
-      left: 100px;
-      width: 80% !important;
-      z-index: -1;
-    }
+  .logoBanner {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 80% !important;
+    z-index: -1;
   }
 }
 

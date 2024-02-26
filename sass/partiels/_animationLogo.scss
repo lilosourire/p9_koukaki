@@ -12,24 +12,24 @@
   width: 90% !important;
 }
 
-.logoBanner {
-  animation: flotter 4s infinite;
-}
+// .logoBanner {
+//   animation: flotter 4s infinite;
+// }
 
-@keyframes flotter {
-  0%,
-  50%,
-  100% {
-    transform: translate(0, 0);
-    /* Position initiale, immobile */
-  }
-  20% {
-    transform: translate(90px, -30px);
-  }
-  40% {
-    transform: translate(40px, -50px);
-  }
-  80% {
-    transform: translate(60px, -80px);
-  }
-}
+// @keyframes flotter {
+//   0%,
+//   50%,
+//   100% {
+//     transform: translate(0, 0);
+//     /* Position initiale, immobile */
+//   }
+//   20% {
+//     transform: translate(90px, -30px);
+//   }
+//   40% {
+//     transform: translate(40px, -50px);
+//   }
+//   80% {
+//     transform: translate(60px, -80px);
+//   }
+// }

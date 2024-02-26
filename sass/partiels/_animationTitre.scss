@@ -2,30 +2,17 @@
 
 @import "../mixins/_keyFrame";
 
-// $vitesseTitre: 1s;
-
-// .Animetitre {
-//   opacity: 0;
-// }
-
-// .animateTitle {
-//   display: inline-block;
-//   position: relative;
-//   opacity: 1;
-//   animation: KframeAnimateTitre $vitesseTitre ease-in-out;
-// }
-
 $animation-speed: 1s;
 
-.Animetitre,
-.Animetitre2 {
+.Animetitre {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity $animation-speed, transform $animation-speed;
+
+  animation: AnimationVersLeHaut $animation-speed ease forwards;
 }
 
-.animateTitle,
-.animateTitle2 {
+.animateTitle {
   opacity: 1;
   transform: translateY(0);
 }

@@ -1,5 +1,4 @@
 ﻿//console.log(" Message dans la console, pour vérifier que le JavaScript est fonctionnel ")
-console.log(" le script javascript lancé se nomme FlottementLogo.js ");
 
 console.log("Page JavaScript flotement du logo est appelée avec succès !");
 document.addEventListener("DOMContentLoaded", function () {

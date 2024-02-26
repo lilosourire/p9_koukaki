@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes AnimationVersLeBas {
   0% {
     transform: translateY(-150px);
@@ -92,6 +93,16 @@ le flottement se fait en X et Y */
   /* position03: */
   100% {
     transform: translate(30px, -40px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .logoBannerFlottement {
@@ -288,15 +299,26 @@ le flottement se fait en X et Y */
     transform: translate(30px, -40px);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .Animetitre {
   opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+  animation: AnimationVersLeHaut 1s ease forwards;
 }
 
 .animateTitle {
-  display: inline-block;
-  position: relative;
   opacity: 1;
-  animation: KframeAnimateTitre 1s ease-in-out;
+  transform: translateY(0);
 }
 
 /* CSS du le Banner */
@@ -307,6 +329,7 @@ le flottement se fait en X et Y */
 
 .banner img {
   margin-top: unset;
+  display: none;
 }
 
 #primary > section.banner > img {
@@ -316,7 +339,6 @@ le flottement se fait en X et Y */
 }
 
 .banner {
-  background-image: none;
   position: relative;
   align-items: unset;
 }
@@ -335,7 +357,7 @@ le flottement se fait en X et Y */
   z-index: -1;
 }
 
-@media (max-width: 800px to 900px) {
+@media (max-width: 800px) {
   .videoBanner {
     width: 120% !important;
   }
@@ -355,19 +377,25 @@ le flottement se fait en X et Y */
     z-index: -1;
   }
 }
-@media (max-width: 800px to 900px) {
+@media (max-width: 800px) {
   .videoBanner {
     width: 120% !important;
   }
 }
 @media (max-width: 700px) {
-  .banner .videoBanner {
+  .banner {
+    background-image: url(../../asset/images/banner.png) !important;
+    background-size: cover; /* ou 'contain', selon vos préférences */
+    background-position: center center;
+    height: 100vh; /* ou ajustez selon vos besoins */
+    display: flex;
+    align-items: unset; /* Assurez-vous que cela ne perturbe pas votre mise en page */
+    justify-content: center; /* Assurez-vous que cela ne perturbe pas votre mise en page */
+  }
+  .videoBanner {
     display: none;
   }
-  .banner .parallaxe {
-    left: 0px;
-  }
-  .banner .logoBanner {
+  .logoBanner {
     position: absolute;
     top: 50px;
     left: 100px;
@@ -394,25 +422,6 @@ le flottement se fait en X et Y */
   width: 90% !important;
 }
 
-.logoBanner {
-  animation: flotter 4s infinite;
-}
-
-@keyframes flotter {
-  0%, 50%, 100% {
-    transform: translate(0, 0);
-    /* Position initiale, immobile */
-  }
-  20% {
-    transform: translate(90px, -30px);
-  }
-  40% {
-    transform: translate(40px, -50px);
-  }
-  80% {
-    transform: translate(60px, -80px);
-  }
-}
 /* CSS pour le Carrousel  */
 .swiper {
   padding-top: 50px;
